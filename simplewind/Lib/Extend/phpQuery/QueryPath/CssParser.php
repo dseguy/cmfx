@@ -278,7 +278,7 @@ class CssParser {
       $position = $this->scanner->position();
       
       if ($this->DEBUG) {
-        print "PARSE " . $this->scanner->token. "\n";
+        echo "PARSE " , $this->scanner->token, "\n";
       }
       $this->selector();
       
@@ -323,7 +323,7 @@ class CssParser {
    * Handle an entire CSS selector.
    */
   private function selector() {
-    if ($this->DEBUG) print "SELECTOR{$this->scanner->position()}\n";
+    if ($this->DEBUG) echo "SELECTOR{$this->scanner->position()}\n";
     $this->consumeWhitespace(); // Remove leading whitespace
     $this->simpleSelectors();
     $this->combinator();
@@ -391,7 +391,7 @@ class CssParser {
     // Check that we don't get two combinators in a row.
     if ($inCombinator) {
       $white = 0;
-      if ($this->DEBUG) print "COMBINATOR: " . CssToken::name($t) . "\n";
+      if ($this->DEBUG) echo "COMBINATOR: " , CssToken::name($t) , "\n";
       $this->consumeWhitespace();
       if ($this->isCombinator($this->scanner->token)) {
         throw new CssParseException("Illegal combinator: Cannot have two combinators in sequence.");
@@ -760,7 +760,7 @@ class CssParser {
         }
         
         if ($this->DEBUG) {
-          print "ATTR: $attrVal AND OP: $op\n";
+          echo "ATTR: $attrVal AND OP: $op\n";
         }
       }
       

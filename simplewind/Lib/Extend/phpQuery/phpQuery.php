@@ -4236,7 +4236,7 @@ class phpQueryObject
 	 *
 	 */
 	public function dump() {
-		print 'DUMP #'.(phpQuery::$dumpCount++).' ';
+		echo 'DUMP #',(phpQuery::$dumpCount++),' ';
 		$debug = phpQuery::$debug;
 		phpQuery::$debug = false;
 //		print __FILE__.':'.__LINE__."\n";
@@ -4244,7 +4244,7 @@ class phpQueryObject
 		return $this;
 	}
 	public function dumpWhois() {
-		print 'DUMP #'.(phpQuery::$dumpCount++).' ';
+		echo 'DUMP #',(phpQuery::$dumpCount++),' ';
 		$debug = phpQuery::$debug;
 		phpQuery::$debug = false;
 //		print __FILE__.':'.__LINE__."\n";
@@ -4253,7 +4253,7 @@ class phpQueryObject
 		return $this;
 	}
 	public function dumpLength() {
-		print 'DUMP #'.(phpQuery::$dumpCount++).' ';
+		echo 'DUMP #',(phpQuery::$dumpCount++),' ';
 		$debug = phpQuery::$debug;
 		phpQuery::$debug = false;
 //		print __FILE__.':'.__LINE__."\n";
@@ -4289,7 +4289,7 @@ class phpQueryObject
 	 *
 	 */
 	public function dumpDie() {
-		print __FILE__.':'.__LINE__;
+		echo __FILE__,':',__LINE__;
 		var_dump($this->htmlOuter());
 		die();
 	}

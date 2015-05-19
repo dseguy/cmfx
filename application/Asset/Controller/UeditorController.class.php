@@ -260,7 +260,7 @@ class UeditorController extends Controller {
 		/* 输出结果 */
 		if (isset($_GET["callback"]) && false ) {//TODO 跨域上传
 			if (preg_match("/^[\w_]+$/", $_GET["callback"])) {
-				echo htmlspecialchars($_GET["callback"]) . '(' . $result . ')';
+				echo htmlspecialchars($_GET["callback"]) , '(' , $result , ')';
 			} else {
 				echo json_encode(array(
 						'state'=> 'callback参数不合法'

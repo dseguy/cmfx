@@ -191,10 +191,10 @@ class Http {
         $headers   	= getallheaders();
         if(!empty($header)) {
             $info 	= $headers[$header];
-            echo($header.':'.$info."\n"); ;
+            echo $header,':',$info,"\n" ; ;
         }else {
             foreach($headers as $key=>$val) {
-                echo("$key:$val\n");
+                echo "$key:$val\n" ;
             }
         }
         $output 	= ob_get_clean();

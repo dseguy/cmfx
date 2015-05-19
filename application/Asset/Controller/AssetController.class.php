@@ -44,7 +44,7 @@ class AssetController extends AdminbaseController {
                 	$url=C("TMPL_PARSE_STRING.__UPLOAD__").$first['savename'];
                 }
                 
-				echo "1," . $url.",".'1,'.$first['name'];
+				echo "1," , $url,",",'1,',$first['name'];
 				exit;
             } else {
                 //上传失败，返回错误
